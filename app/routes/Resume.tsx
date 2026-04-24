@@ -55,7 +55,7 @@ const Resume = () => {
         <nav className="resume-nav">
             <Link to="/" className="back-button">
                 <img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5" />
-                <span className="text-gray-800 text-sm font-semibold">Back to Homepage</span>
+                <span className="text-gray-800 px-10 text-sm font-semibold">Back to Homepage</span>
             </Link>
         </nav>
         <div className="flex flex-row max-lg:flex-col-reverse">
@@ -78,9 +78,9 @@ const Resume = () => {
                 {feedback ? (
                     <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
                         <Summary feedback={feedback}/>
-                        <ATS score={feedback.score || 0} suggestions={feedback.padStart.tips || []}/>
+                        <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []}/>
                         <Details feedback={feedback}/>
-                    </div>
+                    </div>                          
                 ):(
                     <img src="/images/resume-scan-2.gif" className="w-full" alt="" />
                 )}
